@@ -1,0 +1,17 @@
+{
+  "name": "btn-display",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "i2c-bus": "^5.2.1",
+    "oled-i2c-bus": "^1.0.12",
+    "rpi-gpio": "^2.1.7"
+  }
+}
