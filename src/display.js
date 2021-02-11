@@ -1,3 +1,4 @@
+const font = require('oled-font-5x7');
 const i2c = require('i2c-bus');
 const oled = require('oled-i2c-bus');
 
@@ -22,6 +23,12 @@ class Display {
     this.oled.drawPixel([i, j, 1])
     await sleep(t);
     this.oled.drawPixel([i, j, 0])
+    await sleep(0);
+  }
+
+  async writeText(s) {
+    this.oled.setCursor(1, 1);
+    this.oled.writeString(font, 1, s, 1, true);
     await sleep(0);
   }
 }

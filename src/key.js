@@ -7,6 +7,7 @@ let keyPressed = false;
 const Key = new EventEmitter();
 
 gpio.on('change', function (channel, value) {
+  console.log({ channel, value });
   if (keyPressed !== value) {
     Key.emit(value ? 'keydown' : 'keyup');
     keyPressed = value;
